@@ -40,7 +40,11 @@ function itsMapTime(maptime){
       .attr('font-family','Comfortaa')
       .attr('fill',function(d){return d})
 }
+if (location.hash){
+  itsMapTime(location.hash.slice(1))
+} else {
+  itsMapTime('maptime')
+}
 
-itsMapTime('maptime');
 </script>
 </body>
